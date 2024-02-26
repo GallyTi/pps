@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6RPXtzzHyYg4SDUgg/n+EJGGOd1A+PK35rvkpDc9slx1CYYT6LDXgNJM8nrH67v02MK+xtRufn6/6jCOzObSeA==",
+  "success": true,
+  "projectFilePath": "D:\\School\\PPS\\merge sort\\philosophers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gally\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

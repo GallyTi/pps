@@ -1,0 +1,29 @@
+{
+  "NumberOfElements": 1000000,
+  "SequentialTime": 467,
+  "ParallelTime": 3897,
+  "FirstTenSequential": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "FirstTenParallel": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ]
+}

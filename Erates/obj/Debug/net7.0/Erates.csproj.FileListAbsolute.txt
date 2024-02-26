@@ -1,0 +1,15 @@
+D:\School\PPS\Erates\bin\Debug\net7.0\Erates.exe
+D:\School\PPS\Erates\bin\Debug\net7.0\Erates.deps.json
+D:\School\PPS\Erates\bin\Debug\net7.0\Erates.runtimeconfig.json
+D:\School\PPS\Erates\bin\Debug\net7.0\Erates.dll
+D:\School\PPS\Erates\bin\Debug\net7.0\Erates.pdb
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.csproj.AssemblyReference.cache
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.AssemblyInfoInputs.cache
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.AssemblyInfo.cs
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.csproj.CoreCompileInputs.cache
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.dll
+D:\School\PPS\Erates\obj\Debug\net7.0\refint\Erates.dll
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.pdb
+D:\School\PPS\Erates\obj\Debug\net7.0\Erates.genruntimeconfig.cache
+D:\School\PPS\Erates\obj\Debug\net7.0\ref\Erates.dll

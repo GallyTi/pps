@@ -1,0 +1,34 @@
+D:\School\PPS\philosophers\bin\Debug\net7.0\philosophers.exe
+D:\School\PPS\philosophers\bin\Debug\net7.0\philosophers.deps.json
+D:\School\PPS\philosophers\bin\Debug\net7.0\philosophers.runtimeconfig.json
+D:\School\PPS\philosophers\bin\Debug\net7.0\philosophers.dll
+D:\School\PPS\philosophers\bin\Debug\net7.0\philosophers.pdb
+D:\School\PPS\philosophers\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.csproj.AssemblyReference.cache
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.AssemblyInfoInputs.cache
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.AssemblyInfo.cs
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.csproj.CoreCompileInputs.cache
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.csproj.CopyComplete
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.dll
+D:\School\PPS\philosophers\obj\Debug\net7.0\refint\philosophers.dll
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.pdb
+D:\School\PPS\philosophers\obj\Debug\net7.0\philosophers.genruntimeconfig.cache
+D:\School\PPS\philosophers\obj\Debug\net7.0\ref\philosophers.dll
+D:\School\PPS\merge sort\bin\Debug\net7.0\philosophers.exe
+D:\School\PPS\merge sort\bin\Debug\net7.0\philosophers.deps.json
+D:\School\PPS\merge sort\bin\Debug\net7.0\philosophers.runtimeconfig.json
+D:\School\PPS\merge sort\bin\Debug\net7.0\philosophers.dll
+D:\School\PPS\merge sort\bin\Debug\net7.0\philosophers.pdb
+D:\School\PPS\merge sort\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.csproj.AssemblyReference.cache
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.AssemblyInfoInputs.cache
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.AssemblyInfo.cs
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.csproj.CoreCompileInputs.cache
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.csproj.CopyComplete
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.dll
+D:\School\PPS\merge sort\obj\Debug\net7.0\refint\philosophers.dll
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.pdb
+D:\School\PPS\merge sort\obj\Debug\net7.0\philosophers.genruntimeconfig.cache
+D:\School\PPS\merge sort\obj\Debug\net7.0\ref\philosophers.dll
