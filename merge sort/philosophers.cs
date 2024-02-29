@@ -118,7 +118,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var table = new DiningTable(25); // Zmeníme počet filozofov na 5 pre jednoduchosť
+        var table = new DiningTable(7); // Zmeníme počet filozofov na 5 pre jednoduchosť
 
         // Sekvenčné vykonávanie
         var sequentialStopwatch = Stopwatch.StartNew();
@@ -140,7 +140,7 @@ class Program
         };
 
         string jsonString = JsonSerializer.Serialize(results);
-        string outputPath = @"D:\School\PPS\merge sort\output\dining_philosophers_results.json";
+        string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "results.json");
         File.WriteAllText(outputPath, jsonString);
 
         Console.WriteLine($"Results saved to {outputPath}");

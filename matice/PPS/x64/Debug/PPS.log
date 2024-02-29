@@ -1,11 +1,11 @@
 ﻿  MaticoveNasobenie.cpp
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(16,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(16,40): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(16,55): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(16,73): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(32,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(32,40): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(32,55): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(32,73): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\School\PPS\PPS\MaticoveNasobenie.cpp(37,13): warning C4849: OpenMP 'collapse' clause ignored in 'parallel for' directive
-  PPS.vcxproj -> D:\School\PPS\x64\Debug\PPS.exe
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(16,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(16,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(16,45): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(16,60): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(32,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(32,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(32,45): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(32,60): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\PPS\MaticoveNasobenie.cpp(37,13): warning C4849: OpenMP 'collapse' clause ignored in 'parallel for' directive
+  PPS.vcxproj -> C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice\x64\Debug\PPS.exe

@@ -65,7 +65,7 @@ void writeToJSON(const std::chrono::duration<double, std::milli>& elapsed, const
 
 int main() {
     omp_set_dynamic(0);             // Zakáže dynamické priradenie vlákien.
-    omp_set_num_threads(omp_get_num_procs()); // Nastaví počet vlákien na počet procesorov.
+    omp_set_num_threads(omp_get_num_procs());// or 2,4,8 // Nastaví počet vlákien na počet procesorov.
     std::srand(static_cast<unsigned>(std::chrono::system_clock::now().time_since_epoch().count()));  // Seed pre náhodné čísla
 
     // Vytvorte väčšie matice pre zložitejší výpočet.
@@ -77,7 +77,7 @@ int main() {
     fillMatrixWithRandomNumbers(A, 50); // Naplňte A náhodnými číslami
     fillMatrixWithRandomNumbers(B, 50); // Naplňte B náhodnými číslami
 
-    std::ofstream outputFile("D:\\School\\PPS\\matice\\PPS\\output\\results.json");
+    std::ofstream outputFile("output\\results.json");
     outputFile << "{\n";
 
     // Sekvenčný výpočet
@@ -92,7 +92,7 @@ int main() {
     // Reset C pre paralelný výpočet
     C.assign(n, std::vector<int>(n, 0));
 
-    outputFile.open("D:\\School\\PPS\\matice\\PPS\\output\\results.json", std::ios_base::app);
+    outputFile.open("output\\results.json", std::ios_base::app);
 
     // Paralelný výpočet
     start = std::chrono::high_resolution_clock::now();

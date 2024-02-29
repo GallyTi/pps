@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("philosophers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5b7995426bdd170ea776e89fa81f7d75169bcd9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7309771e7a9b6e16d96d048442967a6778ff99d")]
 [assembly: System.Reflection.AssemblyProductAttribute("philosophers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("philosophers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
