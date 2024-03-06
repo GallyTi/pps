@@ -1,0 +1,15 @@
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\bin\Debug\net8.0\matice-paralelne.exe
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\bin\Debug\net8.0\matice-paralelne.deps.json
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\bin\Debug\net8.0\matice-paralelne.runtimeconfig.json
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\bin\Debug\net8.0\matice-paralelne.dll
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\bin\Debug\net8.0\matice-paralelne.pdb
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.AssemblyInfoInputs.cache
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.AssemblyInfo.cs
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.csproj.CoreCompileInputs.cache
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.sourcelink.json
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.dll
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\refint\matice-paralelne.dll
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.pdb
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\matice-paralelne.genruntimeconfig.cache
+C:\Users\ptsko\OneDrive\Počítač\PPS\pps-git\pps\matice-paralelne\matice-paralelne\matice-paralelne\obj\Debug\net8.0\ref\matice-paralelne.dll

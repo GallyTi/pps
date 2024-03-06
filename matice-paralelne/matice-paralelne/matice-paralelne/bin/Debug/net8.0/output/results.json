@@ -1,0 +1,74 @@
+{
+  "int - parallel (2 threads)": {
+    "time": "1094,5145 ms",
+    "matrix_dimensions": [500, 500]
+  },
+  "float - parallel (2 threads)": {
+    "time": "896,8165 ms",
+    "matrix_dimensions": [500, 500]
+  },
+  "int - parallel (4 threads)": {
+    "time": "257,5124 ms",
+    "matrix_dimensions": [500, 500]
+  },
+  "float - parallel (4 threads)": {
+    "time": "382,2577 ms",
+    "matrix_dimensions": [500, 500]
+  },
+  "int - parallel (8 threads)": {
+    "time": "272,7651 ms",
+    "matrix_dimensions": [500, 500]
+  },
+  "float - parallel (8 threads)": {
+    "time": "299,8257 ms",
+    "matrix_dimensions": [500, 500]
+  },
+  "int - parallel (2 threads)": {
+    "time": "3984,5154 ms",
+    "matrix_dimensions": [1000, 1000]
+  },
+  "float - parallel (2 threads)": {
+    "time": "5914,8686 ms",
+    "matrix_dimensions": [1000, 1000]
+  },
+  "int - parallel (4 threads)": {
+    "time": "2406,032 ms",
+    "matrix_dimensions": [1000, 1000]
+  },
+  "float - parallel (4 threads)": {
+    "time": "3443,8485 ms",
+    "matrix_dimensions": [1000, 1000]
+  },
+  "int - parallel (8 threads)": {
+    "time": "2056,4049 ms",
+    "matrix_dimensions": [1000, 1000]
+  },
+  "float - parallel (8 threads)": {
+    "time": "3497,833 ms",
+    "matrix_dimensions": [1000, 1000]
+  },
+  "int - parallel (2 threads)": {
+    "time": "43369,8432 ms",
+    "matrix_dimensions": [2000, 2000]
+  },
+  "float - parallel (2 threads)": {
+    "time": "63673,3116 ms",
+    "matrix_dimensions": [2000, 2000]
+  },
+  "int - parallel (4 threads)": {
+    "time": "26333,7841 ms",
+    "matrix_dimensions": [2000, 2000]
+  },
+  "float - parallel (4 threads)": {
+    "time": "39047,9312 ms",
+    "matrix_dimensions": [2000, 2000]
+  },
+  "int - parallel (8 threads)": {
+    "time": "20686,5798 ms",
+    "matrix_dimensions": [2000, 2000]
+  },
+  "float - parallel (8 threads)": {
+    "time": "33980,7273 ms",
+    "matrix_dimensions": [2000, 2000]
+  },
+}
