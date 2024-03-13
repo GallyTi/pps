@@ -1,0 +1,20 @@
+{
+  "size_500_int": {
+    "time": "4466.63 ms"
+  },
+  "size_500_float": {
+    "time": "3496.78 ms"
+  },
+  "size_1000_int": {
+    "time": "35205.6 ms"
+  },
+  "size_1000_float": {
+    "time": "34488.4 ms"
+  },
+  "size_2000_int": {
+    "time": "367966 ms"
+  },
+  "size_2000_float": {
+    "time": "367062 ms"
+  },
+}

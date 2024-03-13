@@ -1,18 +1,35 @@
 ﻿#include <iostream>
 #include <vector>
 #include <chrono>
+#include <string>
 #include <fstream>
-#include <omp.h>
+#include <random>
 
-void fillMatrixWithRandomNumbers(std::vector<std::vector<int>>& matrix, int max_value) {
+void fillMatrixWithRandomIntegers(std::vector<std::vector<int>>& matrix, int max_value) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> dis(0, max_value);
+
     for (auto& row : matrix) {
         for (auto& elem : row) {
-            elem = std::rand() % max_value;  // Náhodné číslo do max_value
+            elem = dis(gen);
         }
     }
 }
 
-void multiplyMatricesSequentially(const std::vector<std::vector<int>>& A, const std::vector<std::vector<int>>& B, std::vector<std::vector<int>>& C) {
+void fillMatrixWithRandomFloats(std::vector<std::vector<float>>& matrix, float max_value) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<float> dis(0.0f, max_value);
+
+    for (auto& row : matrix) {
+        for (auto& elem : row) {
+            elem = dis(gen);
+        }
+    }
+}
+
+void multiplyMatricesIntegers(const std::vector<std::vector<int>>& A, const std::vector<std::vector<int>>& B, std::vector<std::vector<int>>& C) {
     int r1 = A.size(), c1 = A[0].size(), r2 = B.size(), c2 = B[0].size();
     if (c1 != r2) {
         std::cout << "Matrices cannot be multiplied" << std::endl;
@@ -28,16 +45,15 @@ void multiplyMatricesSequentially(const std::vector<std::vector<int>>& A, const 
     }
 }
 
-void multiplyMatricesParallel(const std::vector<std::vector<int>>& A, const std::vector<std::vector<int>>& B, std::vector<std::vector<int>>& C) {
+void multiplyMatricesFloats(const std::vector<std::vector<float>>& A, const std::vector<std::vector<float>>& B, std::vector<std::vector<float>>& C) {
     int r1 = A.size(), c1 = A[0].size(), r2 = B.size(), c2 = B[0].size();
     if (c1 != r2) {
         std::cout << "Matrices cannot be multiplied" << std::endl;
         return;
     }
-#pragma omp parallel for collapse(2)
     for (int i = 0; i < r1; i++) {
         for (int j = 0; j < c2; j++) {
-            C[i][j] = 0;
+            C[i][j] = 0.0f;
             for (int k = 0; k < c1; k++) {
                 C[i][j] += A[i][k] * B[k][j];
             }
@@ -45,61 +61,50 @@ void multiplyMatricesParallel(const std::vector<std::vector<int>>& A, const std:
     }
 }
 
-void writeToJSON(const std::chrono::duration<double, std::milli>& elapsed, const std::vector<std::vector<int>>& C, const std::string& method, std::ofstream& outputFile) {
-    outputFile << "  \"" << method << "\": {\n";
-    outputFile << "    \"time\": \"" << elapsed.count() << " ms\",\n";
-    outputFile << "    \"result\": [\n";
-    for (size_t i = 0; i < C.size(); ++i) {
-        outputFile << "      [";
-        for (size_t j = 0; j < C[i].size(); ++j) {
-            outputFile << C[i][j];
-            if (j < C[i].size() - 1) outputFile << ", ";
-        }
-        outputFile << "]";
-        if (i < C.size() - 1) outputFile << ",";
-        outputFile << "\n";
-    }
-    outputFile << "    ]\n";
+void writeToJSON(const std::chrono::duration<double, std::milli>& elapsed, const std::vector<std::vector<int>>& C_int, const std::vector<std::vector<float>>& C_float, const std::string& method, const std::string& type, std::ofstream& outputFile) {
+    outputFile << "  \"" << method << "_" << type << "\": {\n";
+    outputFile << "    \"time\": \"" << elapsed.count() << " ms\"\n";
     outputFile << "  },\n";
 }
 
 int main() {
-    omp_set_dynamic(0);             // Zakáže dynamické priradenie vlákien.
-    omp_set_num_threads(omp_get_num_procs());// or 2,4,8 // Nastaví počet vlákien na počet procesorov.
-    std::srand(static_cast<unsigned>(std::chrono::system_clock::now().time_since_epoch().count()));  // Seed pre náhodné čísla
+    std::srand(static_cast<unsigned>(std::chrono::system_clock::now().time_since_epoch().count()));
 
-    // Vytvorte väčšie matice pre zložitejší výpočet.
-    size_t n = 1000; // Napríklad 50x50 matice.
-    std::vector<std::vector<int>> A(n, std::vector<int>(n));
-    std::vector<std::vector<int>> B(n, std::vector<int>(n));
-    std::vector<std::vector<int>> C(n, std::vector<int>(n));
-
-    fillMatrixWithRandomNumbers(A, 50); // Naplňte A náhodnými číslami
-    fillMatrixWithRandomNumbers(B, 50); // Naplňte B náhodnými číslami
-
-    std::ofstream outputFile("output\\results.json");
+    std::vector<int> matrix_sizes = { 500, 1000, 2000 };
+    std::ofstream outputFile("output/results.json");
     outputFile << "{\n";
 
-    // Sekvenčný výpočet
-    auto start = std::chrono::high_resolution_clock::now();
-    multiplyMatricesSequentially(A, B, C);
-    auto end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> elapsed = end - start;
-    writeToJSON(elapsed, C, "sequential", outputFile);
+    for (size_t size : matrix_sizes) {
+        std::cout << "matrix size: " << size << "\n";
+        std::vector<std::vector<int>> A_int(size, std::vector<int>(size));
+        std::vector<std::vector<int>> B_int(size, std::vector<int>(size));
+        std::vector<std::vector<int>> C_int(size, std::vector<int>(size));
 
-    outputFile.close(); // Zatvorte súbor pred začiatkom paralelného výpočtu.
+        std::vector<std::vector<float>> A_float(size, std::vector<float>(size));
+        std::vector<std::vector<float>> B_float(size, std::vector<float>(size));
+        std::vector<std::vector<float>> C_float(size, std::vector<float>(size));
 
-    // Reset C pre paralelný výpočet
-    C.assign(n, std::vector<int>(n, 0));
+        fillMatrixWithRandomIntegers(A_int, 50);
+        fillMatrixWithRandomIntegers(B_int, 50);
 
-    outputFile.open("output\\results.json", std::ios_base::app);
+        fillMatrixWithRandomFloats(A_float, 50.0f);
+        fillMatrixWithRandomFloats(B_float, 50.0f);
 
-    // Paralelný výpočet
-    start = std::chrono::high_resolution_clock::now();
-    multiplyMatricesParallel(A, B, C);
-    end = std::chrono::high_resolution_clock::now();
-    elapsed = end - start;
-    writeToJSON(elapsed, C, "parallel", outputFile);
+        std::cout << "multiplying int of size: " << size << "\n";
+        auto start_int = std::chrono::high_resolution_clock::now();
+        multiplyMatricesIntegers(A_int, B_int, C_int);
+        auto end_int = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double, std::milli> elapsed_int = end_int - start_int;
+
+        std::cout << "multiplying float of size: " << size << "\n";
+        auto start_float = std::chrono::high_resolution_clock::now();
+        multiplyMatricesFloats(A_float, B_float, C_float);
+        auto end_float = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double, std::milli> elapsed_float = end_float - start_float;
+
+        writeToJSON(elapsed_int, C_int, C_float, "size_" + std::to_string(size), "int", outputFile);
+        writeToJSON(elapsed_float, C_int, C_float, "size_" + std::to_string(size), "float", outputFile);
+    }
 
     outputFile << "}\n";
     outputFile.close();

@@ -155,7 +155,6 @@ class MatrixMultiplier
                     outputFile.Flush();
                 }
             }
-
             outputFile.WriteLine("}");
         }
     }

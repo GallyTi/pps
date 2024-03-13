@@ -1,0 +1,1 @@
+{"Limit":1000000000,"SequentialTimeMs":23704,"ParallelTimeMs2Threads":21304,"ParallelTimeMs4Threads":19188,"ParallelTimeMs8Threads":21073,"PrimesFoundSequential":50847534,"PrimesFoundParallelUsing2Threads":50847534,"PrimesFoundParallelUsing4Threads":50847534,"PrimesFoundParallelUsing8Threads":50847534}
