@@ -41,7 +41,7 @@ class MatrixMultiplier
 
         ParallelOptions options = new ParallelOptions();
         options.MaxDegreeOfParallelism = threads;
-
+        /*
         Parallel.For(0, r1, options, i =>
         {
             for (int j = 0; j < c2; j++)
@@ -53,7 +53,19 @@ class MatrixMultiplier
                 }
                 C[i, j] = sum;
             }
+        });*/
+        Parallel.For(0, r1, options, i =>
+        {
+            for (int k = 0; k < c1; k++)
+            {
+                for (int j = 0; j < c2; j++)
+                {
+                    C[i, j] += A[i, k] * B[k, j];
+                }
+            }
         });
+
+
     }
 
 
@@ -68,13 +80,24 @@ class MatrixMultiplier
 
         ParallelOptions options = new ParallelOptions();
         options.MaxDegreeOfParallelism = threads;
-
+        /*
         Parallel.For(0, r1, options, i =>
         {
             for (int j = 0; j < c2; j++)
             {
                 C[i, j] = 0;
                 for (int k = 0; k < c1; k++)
+                {
+                    C[i, j] += A[i, k] * B[k, j];
+                }
+            }
+        });*/
+
+        Parallel.For(0, r1, options, i =>
+        {
+            for (int k = 0; k < c1; k++)
+            {
+                for (int j = 0; j < c2; j++)
                 {
                     C[i, j] += A[i, k] * B[k, j];
                 }

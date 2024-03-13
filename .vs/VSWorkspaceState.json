@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\matice-paralelne",
+    "\\matice-paralelne\\matice-paralelne",
+    "\\matice-paralelne\\matice-paralelne\\matice-paralelne"
   ],
-  "SelectedNode": "\\PPS.sln",
+  "SelectedNode": "\\matice-paralelne\\matice-paralelne\\matice-paralelne\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

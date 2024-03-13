@@ -1,74 +1,74 @@
 {
   "int - parallel (2 threads)": {
-    "time": "1094,5145 ms",
+    "time": "1138,6349 ms",
     "matrix_dimensions": [500, 500]
   },
   "float - parallel (2 threads)": {
-    "time": "896,8165 ms",
+    "time": "1778,9298 ms",
     "matrix_dimensions": [500, 500]
   },
   "int - parallel (4 threads)": {
-    "time": "257,5124 ms",
+    "time": "995,016 ms",
     "matrix_dimensions": [500, 500]
   },
   "float - parallel (4 threads)": {
-    "time": "382,2577 ms",
+    "time": "1000,0629 ms",
     "matrix_dimensions": [500, 500]
   },
   "int - parallel (8 threads)": {
-    "time": "272,7651 ms",
+    "time": "577,4274 ms",
     "matrix_dimensions": [500, 500]
   },
   "float - parallel (8 threads)": {
-    "time": "299,8257 ms",
+    "time": "604,5265 ms",
     "matrix_dimensions": [500, 500]
   },
   "int - parallel (2 threads)": {
-    "time": "3984,5154 ms",
+    "time": "7902,011 ms",
     "matrix_dimensions": [1000, 1000]
   },
   "float - parallel (2 threads)": {
-    "time": "5914,8686 ms",
+    "time": "8205,3507 ms",
     "matrix_dimensions": [1000, 1000]
   },
   "int - parallel (4 threads)": {
-    "time": "2406,032 ms",
+    "time": "4530,7717 ms",
     "matrix_dimensions": [1000, 1000]
   },
   "float - parallel (4 threads)": {
-    "time": "3443,8485 ms",
+    "time": "5486,9722 ms",
     "matrix_dimensions": [1000, 1000]
   },
   "int - parallel (8 threads)": {
-    "time": "2056,4049 ms",
+    "time": "3723,1013 ms",
     "matrix_dimensions": [1000, 1000]
   },
   "float - parallel (8 threads)": {
-    "time": "3497,833 ms",
+    "time": "4480,4585 ms",
     "matrix_dimensions": [1000, 1000]
   },
   "int - parallel (2 threads)": {
-    "time": "43369,8432 ms",
+    "time": "61483,0332 ms",
     "matrix_dimensions": [2000, 2000]
   },
   "float - parallel (2 threads)": {
-    "time": "63673,3116 ms",
+    "time": "65973,2636 ms",
     "matrix_dimensions": [2000, 2000]
   },
   "int - parallel (4 threads)": {
-    "time": "26333,7841 ms",
+    "time": "35687,7754 ms",
     "matrix_dimensions": [2000, 2000]
   },
   "float - parallel (4 threads)": {
-    "time": "39047,9312 ms",
+    "time": "39010,0563 ms",
     "matrix_dimensions": [2000, 2000]
   },
   "int - parallel (8 threads)": {
-    "time": "20686,5798 ms",
+    "time": "26708,7037 ms",
     "matrix_dimensions": [2000, 2000]
   },
   "float - parallel (8 threads)": {
-    "time": "33980,7273 ms",
+    "time": "30491,9835 ms",
     "matrix_dimensions": [2000, 2000]
   },
 }
