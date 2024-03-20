@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\matice-paralelne",
-    "\\matice-paralelne\\matice-paralelne",
-    "\\matice-paralelne\\matice-paralelne\\matice-paralelne"
+    ""
   ],
-  "SelectedNode": "\\matice-paralelne\\matice-paralelne\\matice-paralelne\\Program.cs",
+  "SelectedNode": "\\philosophers.sln",
   "PreviewInSolutionExplorer": false
 }

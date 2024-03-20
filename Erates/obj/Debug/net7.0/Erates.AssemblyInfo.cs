@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Erates")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9ab5d4cbe14a9376c2ad322173d8396ca1f5a4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9df02d3098e068fb9b6e14769f39e3d12ba9e7c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Erates")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Erates")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
