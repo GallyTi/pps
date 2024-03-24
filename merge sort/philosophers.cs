@@ -95,14 +95,29 @@ class DiningTable
         }
     }
 
-    public async Task StartDiningAsync()
+    public async Task StartDiningAsync(int maxConcurrency)
     {
-        var eatingTasks = new List<Task>();
-        foreach (var philosopher in Philosophers)
+        using (var semaphore = new SemaphoreSlim(maxConcurrency, maxConcurrency))
         {
-            eatingTasks.Add(philosopher.ThinkAndEatAsync());
+            var tasks = new List<Task>();
+            foreach (var philosopher in Philosophers)
+            {
+                // Čakajte na dostupnosť semaforu pred spustením úlohy
+                await semaphore.WaitAsync();
+                tasks.Add(Task.Run(async () =>
+                {
+                    try
+                    {
+                        await philosopher.ThinkAndEatAsync();
+                    }
+                    finally
+                    {
+                        semaphore.Release();
+                    }
+                }));
+            }
+            await Task.WhenAll(tasks);
         }
-        await Task.WhenAll(eatingTasks);
     }
 
     public void StartDiningSequentially()
@@ -118,7 +133,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var table = new DiningTable(7); // Zmeníme počet filozofov na 5 pre jednoduchosť
+        var table = new DiningTable(63); // Použitie 7 filozofov
 
         // Sekvenčné vykonávanie
         var sequentialStopwatch = Stopwatch.StartNew();
@@ -126,19 +141,25 @@ class Program
         sequentialStopwatch.Stop();
         Console.WriteLine($"Sequential dining completed in {sequentialStopwatch.ElapsedMilliseconds} ms.");
 
-        // Paralelné vykonávanie
-        var parallelStopwatch = Stopwatch.StartNew();
-        await table.StartDiningAsync();
-        parallelStopwatch.Stop();
-        Console.WriteLine($"Parallel dining completed in {parallelStopwatch.ElapsedMilliseconds} ms.");
+        var results = new List<object>();
+
+        // Pridanie výsledku sekvenčného spustenia
+        results.Add(new { Type = "Sequential", Time = sequentialStopwatch.ElapsedMilliseconds });
+
+        // Paralelné vykonávanie pre rôzne úrovne súbežnosti
+        var concurrencyLevels = new[] { 2, 4, 8 };
+        foreach (var level in concurrencyLevels)
+        {
+            var parallelStopwatch = Stopwatch.StartNew();
+            await table.StartDiningAsync(level);
+            parallelStopwatch.Stop();
+            Console.WriteLine($"Parallel dining with concurrency level {level} completed in {parallelStopwatch.ElapsedMilliseconds} ms.");
+
+            // Pridanie výsledku paralelného spustenia pre každú úroveň súbežnosti
+            results.Add(new { Type = $"Parallel - Level {level}", Time = parallelStopwatch.ElapsedMilliseconds });
+        }
 
         // Uloženie výsledkov do JSON
-        var results = new
-        {
-            SequentialTime = sequentialStopwatch.ElapsedMilliseconds,
-            ParallelTime = parallelStopwatch.ElapsedMilliseconds
-        };
-
         string jsonString = JsonSerializer.Serialize(results);
         string outputPath = Path.Combine(Directory.GetCurrentDirectory(), "results.json");
         File.WriteAllText(outputPath, jsonString);

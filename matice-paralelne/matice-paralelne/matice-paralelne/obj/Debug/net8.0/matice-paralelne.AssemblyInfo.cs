@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("matice-paralelne")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9df02d3098e068fb9b6e14769f39e3d12ba9e7c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("matice-paralelne")]
 [assembly: System.Reflection.AssemblyTitleAttribute("matice-paralelne")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

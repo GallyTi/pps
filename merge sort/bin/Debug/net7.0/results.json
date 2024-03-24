@@ -1,1 +1,1 @@
-{"SequentialTime":15540,"ParallelTime":1110}
+[{"Type":"Sequential","Time":13650},{"Type":"Parallel - Level 2","Time":6940},{"Type":"Parallel - Level 4","Time":4332},{"Type":"Parallel - Level 8","Time":2385}]

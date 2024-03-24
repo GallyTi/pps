@@ -54,7 +54,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        int limit = 1000000000; // Hľadáme prvočísla do 1 milióna
+        int limit = 10000000; // Hľadáme prvočísla do 1 milióna
 
         // Sekvenčné vyhľadávanie prvočísel
         var stopwatchSequential = Stopwatch.StartNew();

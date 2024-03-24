@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Erates"
   ],
-  "SelectedNode": "\\philosophers.sln",
+  "SelectedNode": "\\Erates\\Erates.cs",
   "PreviewInSolutionExplorer": false
 }
